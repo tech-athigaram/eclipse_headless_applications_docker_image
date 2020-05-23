@@ -7,7 +7,7 @@ RUN curl -L -k -o /data/eclipse.tar.gz https://download.eclipse.org/eclipse/down
 
 #Stage II : Shipping the eclipse with ubuntu and jre container to making it ready for headless execution
 FROM techathigaram/jre_adoptopenjdk8_ubuntu:8u252-b09
-COPY ./entrypoint.sh /app/
+COPY ./eclipse_p2_categorypublisher/entrypoint.sh /app/
 COPY --from=0 /data/*.tar.gz eclipse.tar.gz
 RUN mkdir app
 RUN tar -xzf eclipse.tar.gz -C /app/
