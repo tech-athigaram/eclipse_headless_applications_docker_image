@@ -7,7 +7,7 @@ RUN curl -L -k -o /data/jre.tar.gz https://github.com/AdoptOpenJDK/openjdk8-bina
 
 #Stage II : Shipping the jre with ubuntu container to making it ready for eclipse installation
 FROM ubuntu:20.10
-COPY --from=0 /data/*.tar.gz jre.tar.gz
+COPY --from=0 /data/jre.tar.gz jre.tar.gz
 RUN cd /opt/ && mkdir java
 RUN tar -xzf /jre.tar.gz -C /opt/java
 RUN mv /opt/java/jdk8u252-b09-jre /opt/java/jre
