@@ -24,9 +24,9 @@ jobs:
         # Server address of Docker registry. If not set then will default to Docker Hub
         #registry: # optional
         # Docker repository to tag the image with
-        repository: techathigaram
+        repository: techathigaram/jre_adoptopenjdk8_ubuntu
         # Comma-delimited list of tags. These will be added to the registry/repository to form the image's tags
-        tags: jre_adoptopenjdk8_ubuntu:8u
+        tags: 8u252-b09
         # Automatically tags the built image with the git reference as per the readme
         #tag_with_ref: # optional
         # Automatically tags the built image with the git short SHA as per the readme
