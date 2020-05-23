@@ -1,0 +1,2 @@
+#!/bin/bash
+eclipse -noSplash -data /app/data/workspace -consolelog -application org.eclipse.equinox.p2.publisher.CategoryPublisher -metadataRepository file:/app/data/repository -categoryDefinition file:/app/data/category.xml -categoryQualifier -compress
